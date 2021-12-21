@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  background: url('office.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-container {
+  background-color: white;
+  width: 32%;
+  height: auto;
+  min-width: 610px;
+  max-width: 610px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title-container {
+  display: flex;
+  margin: 45px 0px;
+}
+
+.title-ob,
+.title-students {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.title-ob {
+  color: #121625;
+  margin-right: 5px;
+  font-weight: 400;
+}
+
+.title-students {
+  color: #32d4a4;
+  font-weight: 800;
+}
+
+#form {
+  width: 100%;
+}
+
+.form-item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 14px;
+  color: #121625;
+  line-height: 16px;
+}
+
+.form-input input {
+  background: #f8f8f9;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 12px;
+}
+
+.form-checkbox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #121625;
+  flex-grow: 1;
+  margin: 0px 10px;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1em;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 14px;
+  height: 14px;
+  border: 0.15em solid #a5a8b3;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']:checked {
+  border: 0.15em solid #32d4a4;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #32d4a4;
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+.form-item a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #32d5a4;
+  margin-right: 45px;
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #32d5a4;
+  border-radius: 8px;
+  border: none;
+  padding: 11px 14px 11px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 170px;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #a5a8b3;
+  letter-spacing: -0.02em;
+}
+
+.link:not(:last-child) {
+  text-decoration: none;
+}
+
+@media (min-width: 10px) and (max-width: 980px) {
+  #root {
+    background: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-container {
+    width: 100%;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+    min-width: unset;
+  }
+}
